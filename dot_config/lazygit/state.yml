@@ -1,0 +1,10 @@
+lastupdatecheck: 0
+recentrepos:
+- /home/emrecan/Projects/python_test
+startuppopupversion: 5
+customcommandshistory:
+- reset
+- q
+- git log
+hidecommandlog: false
+ignorewhitespaceindiffview: true
