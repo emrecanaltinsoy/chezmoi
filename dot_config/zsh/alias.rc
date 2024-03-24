@@ -48,6 +48,9 @@ alias deploy_local_lambda="$HOME/Projects/dcr-ai-flagship/scripting/deploy_local
 alias nrw="$HOME/Projects/dcr-ai-flagship/scripting/frontendRunWeb.sh"
 alias nrb="$HOME/Projects/dcr-ai-flagship/scripting/frontendRunBuild.sh"
 
+## Chezmoi
+alias cm="chezmoi"
+
 ## Config
 alias config="/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME"
 alias confa="config add ."
