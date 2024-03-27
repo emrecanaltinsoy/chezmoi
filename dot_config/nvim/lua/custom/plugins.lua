@@ -52,6 +52,7 @@ local plugins = {
         "mypy",
         "ruff-lsp",
         "pyright",
+        "lua-language-server",
       },
     },
   },
