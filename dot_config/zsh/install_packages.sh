@@ -2,12 +2,51 @@
 # PACKAGES #
 ############
 
-# Install zellij if doesn't exist
-if [ ! -x "$(command -v zellij)" ]; then
-    echo "zellij is not installed! installing now."
-    cargo install --locked zellij
+############
+### OMZ  ###
+############
+if [[ ! -d ~/.oh-my-zsh ]]; then
+    echo "oh-my-zsh is not installed! installing now."
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 fi
 
+# if [[ ! -d ~/.oh-my-zsh/custom/plugins/conda-zsh-completion ]] then
+#     git clone https://github.com/esc/conda-zsh-completion ~/.oh-my-zsh/custom/plugins/conda-zsh-completion
+# fi
+
+if [[ ! -d ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting ]] then
+    git clone https://github.com/zsh-users/zsh-syntax-highlighting ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+fi
+
+if [[ ! -d ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions ]] then
+    git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+fi
+
+if [[ ! -d ~/.oh-my-zsh/custom/plugins/k ]] then
+    git clone https://github.com/supercrabtree/k ~/.oh-my-zsh/custom/plugins/k
+fi
+
+############
+### TMUX ###
+############
+if [ ! -x "$(command -v tmux)" ]; then
+    echo "tmux is not installed! installing now."
+    sudo apt install tmux
+fi
+
+if [[ ! -d ~/.tmux ]] then
+    git clone https://github.com/gpakosz/.tmux.git ~/.tmux
+    ln -s -f .tmux/.tmux.conf
+    cp .tmux/.tmux.conf.local .
+fi
+
+# if [[ ! -d ~/.tmux/plugins/tpm ]] then
+#     git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+# fi
+
+if [[ ! -d ~/.tmuxifier ]] then
+    git clone https://github.com/jimeh/tmuxifier.git ~/.tmuxifier
+fi
 
 
 # Install neovim if doesn't exist
@@ -45,6 +84,12 @@ fi
 if [ ! -x "$(command -v rustup)" ]; then
     echo "rustup is not installed! installing now."
     curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+fi
+
+# Install zellij if doesn't exist
+if [ ! -x "$(command -v zellij)" ]; then
+    echo "zellij is not installed! installing now."
+    cargo install --locked zellij
 fi
 
 ## Install alacritty if doesn't exist
@@ -126,48 +171,3 @@ if [ ! -x "$(command -v tokei)" ]; then
     cargo install tokei -q --locked
 fi
 
-############
-### OMZ  ###
-############
-if [[ ! -d ~/.oh-my-zsh ]]; then
-    echo "oh-my-zsh is not installed! installing now."
-    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-fi
-
-# if [[ ! -d ~/.oh-my-zsh/custom/plugins/conda-zsh-completion ]] then
-#     git clone https://github.com/esc/conda-zsh-completion ~/.oh-my-zsh/custom/plugins/conda-zsh-completion
-# fi
-
-if [[ ! -d ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting ]] then
-    git clone https://github.com/zsh-users/zsh-syntax-highlighting ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
-fi
-
-if [[ ! -d ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions ]] then
-    git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
-fi
-
-if [[ ! -d ~/.oh-my-zsh/custom/plugins/k ]] then
-    git clone https://github.com/supercrabtree/k ~/.oh-my-zsh/custom/plugins/k
-fi
-
-############
-### TMUX ###
-############
-if [ ! -x "$(command -v tmux)" ]; then
-    echo "tmux is not installed! installing now."
-    sudo apt install tmux
-fi
-
-if [[ ! -d ~/.tmux ]] then
-    git clone https://github.com/gpakosz/.tmux.git ~/.tmux
-    ln -s -f .tmux/.tmux.conf
-    cp .tmux/.tmux.conf.local .
-fi
-
-# if [[ ! -d ~/.tmux/plugins/tpm ]] then
-#     git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-# fi
-
-if [[ ! -d ~/.tmuxifier ]] then
-    git clone https://github.com/jimeh/tmuxifier.git ~/.tmuxifier
-fi
