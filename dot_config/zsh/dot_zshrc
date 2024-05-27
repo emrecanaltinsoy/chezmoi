@@ -61,6 +61,9 @@ fi
 ## Aliases
 source $HOME/.config/zsh/alias.rc
 
+## Secrets
+source $HOME/.config/zsh/secrets
+
 neofetch
 
 autoload -U compinit; compinit
