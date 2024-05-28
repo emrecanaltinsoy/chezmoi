@@ -43,9 +43,10 @@ eval "$(pyenv init -)"
 eval "$(zoxide init zsh --cmd cd)"
 ### Starship
 eval "$(starship init zsh)"
-### Mcfly
-eval "$(mcfly init zsh)"
-export MCFLY_RESULTS=20
+
+# ### Mcfly
+# eval "$(mcfly init zsh)"
+# export MCFLY_RESULTS=20
 
 ### Tmuxifier
 export TMUXIFIER_LAYOUT_PATH="$HOME/.tmux-layouts"
@@ -53,7 +54,7 @@ export PATH=$PATH:$HOME/.tmuxifier/bin
 eval "$(tmuxifier init -)"
 
 # zsh essentials
-HISTFILE=".histfile"             # Save 100000 lines of history
+HISTFILE="$HOME/.config/zsh/.histfile"             # Save 100000 lines of history
 HISTSIZE=100000
 SAVEHIST=100000
 setopt BANG_HIST                 # Treat the '!' character specially during expansion.
