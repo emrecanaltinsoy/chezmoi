@@ -90,11 +90,11 @@ if [ ! -x "$(command -v rustup)" ]; then
     curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 fi
 
-# Install zellij if doesn't exist
-if [ ! -x "$(command -v zellij)" ]; then
-    echo "zellij is not installed! installing now."
-    cargo install --locked zellij
-fi
+# # Install zellij if doesn't exist
+# if [ ! -x "$(command -v zellij)" ]; then
+#     echo "zellij is not installed! installing now."
+#     cargo install --locked zellij
+# fi
 
 ## Install alacritty if doesn't exist
 # if [ ! -x "$(command -v alacritty)" ]; then
