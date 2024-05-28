@@ -110,10 +110,10 @@ if [ ! -x "$(command -v starship)" ]; then
 fi
 
 ## Install mcfly if doesn't exist
-if [ ! -x "$(command -v mcfly)" ]; then
-    echo "mcfly is not installed! installing now."
-    cargo install mcfly -q
-fi
+# if [ ! -x "$(command -v mcfly)" ]; then
+#     echo "mcfly is not installed! installing now."
+#     cargo install mcfly -q
+# fi
 
 ## Install bat if doesn't exist
 if [ ! -x "$(command -v bat)" ]; then
