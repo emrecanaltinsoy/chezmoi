@@ -26,6 +26,10 @@ if [[ ! -d ~/.oh-my-zsh/custom/plugins/k ]] then
     git clone https://github.com/supercrabtree/k ~/.oh-my-zsh/custom/plugins/k
 fi
 
+if [[ ! -d ~/.oh-my-zsh/custom/plugins/zsh-fzf-history-search ]] then
+    git clone https://github.com/joshskidmore/zsh-fzf-history-search ~/.oh-my-zsh/custom/plugins/zsh-fzf-history-search
+fi
+
 ############
 ### TMUX ###
 ############
