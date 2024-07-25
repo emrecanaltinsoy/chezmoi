@@ -15,10 +15,10 @@ alias remove-residuals="sudo apt-get purge $(dpkg -l | grep '^rc' | awk '{aggr=a
 alias add2path="export PYTHONPATH=$PYTHONPATH:$(pwd)"
 
 ## Docker
-if [ -x "$(command -v docker)" ]; then
-    alias dexec='(){docker exec -it $1 /bin/bash;}'
-    alias docsr="docker stop $(docker ps -q) && docker rm $(docker ps -a -q)"
-fi
+# if [ -x "$(command -v docker)" ]; then
+#     alias dexec='(){docker exec -it $1 /bin/bash;}'
+#     alias docsr="docker stop $(docker ps -q) && docker rm $(docker ps -a -q)"
+# fi
 
 ## Git
 alias gs="git status"
