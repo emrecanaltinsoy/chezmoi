@@ -1,0 +1,4 @@
+customCommands:
+        - key: '<c-f>'
+          context: 'localBranches'
+          command: 'git fetch -p'

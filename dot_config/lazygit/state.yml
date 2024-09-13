@@ -1,10 +1,16 @@
 lastupdatecheck: 0
 recentrepos:
-- /home/emrecan/Projects/python_test
+- /home/emrecan/Projects/dcr-ai-flagship
 startuppopupversion: 5
+lastversion: 0.41.0
 customcommandshistory:
 - reset
 - q
 - git log
 hidecommandlog: false
 ignorewhitespaceindiffview: true
+diffcontextsize: 3
+localbranchsortorder: recency
+remotebranchsortorder: alphabetical
+gitlogorder: topo-order
+gitlogshowgraph: always
