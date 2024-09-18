@@ -8,13 +8,18 @@ if initialize_session "dev-local"; then
 
   # Create a new window inline within session layout definition.
   new_window "dev-local"
+  new_window "lazygit"
+
+  select_window "dev-local"
   split_h 30
   run_cmd "nrb"
   split_v 50
   run_cmd "nrw"
   # Load a defined window layout.
-  #load_window "example"
-
+  
+  select_window "lazygit"
+  run_cmd "lazygit"
+  
   # Select the default active window on session creation.
   #select_window 1
 
