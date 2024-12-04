@@ -36,6 +36,7 @@ alias gm="git merge"
 alias gl="git log"
 alias gfp="git fetch -p"
 alias gpull="git pull"
+alias glo="git log --oneline --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'"
 
 # alias gpsu="git push --set-upstream origin $(git branch --show-current)"
 # alias grb='f() { git rebase -i HEAD~$1 };f'
