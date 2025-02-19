@@ -52,6 +52,10 @@ alias nrb="$HOME/Projects/dcr-ai-flagship/scripting/frontendRunBuild.sh"
 ## Chezmoi
 alias cm="chezmoi"
 
+## VSCode
+alias c="code"
+alias ch="code ."
+
 ## Config
 alias config="/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME"
 alias confa="config add ."

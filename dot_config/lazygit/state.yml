@@ -1,6 +1,7 @@
 lastupdatecheck: 0
 recentrepos:
 - /home/emrecan/Projects/dcr-ai-flagship
+- /home/emrecan/Projects/dcr-ai-nlp
 - /home/emrecan/Projects/adventOfCode
 startuppopupversion: 5
 lastversion: 0.41.0
@@ -10,7 +11,7 @@ customcommandshistory:
 - git log
 hidecommandlog: false
 ignorewhitespaceindiffview: true
-diffcontextsize: 3
+diffcontextsize: 7
 localbranchsortorder: recency
 remotebranchsortorder: alphabetical
 gitlogorder: topo-order
