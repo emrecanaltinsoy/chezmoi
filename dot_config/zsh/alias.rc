@@ -21,8 +21,12 @@ alias add2path="export PYTHONPATH=$PYTHONPATH:$(pwd)"
 # fi
 
 ## Git
+if [ -x "$(command -v docker)" ]; then
+    git config --global alias.upstream '!git push -u origin HEAD'
+fi
+
 alias gs="git status"
-alias gp="git push"
+alias gp="git upstream"
 alias gas="git add . && git stash"
 alias gsp="git stash pop && git restore --staged ."
 alias gri="git rebase -i"
@@ -46,8 +50,8 @@ alias create_aws_cred="/home/emrecan/Projects/aws-saml-cli-authentication/create
 alias deploy_local_lambda="$HOME/Projects/dcr-ai-flagship/scripting/deploy_local_lambda/deploy.sh"
 
 ## NPM Local Dev
-alias nrw="$HOME/Projects/dcr-ai-flagship/scripting/frontendRunWeb.sh"
-alias nrb="$HOME/Projects/dcr-ai-flagship/scripting/frontendRunBuild.sh"
+alias nrw="cd $HOME/Projects/dcr-ai-flagship/scripting && ./frontendRunWeb.sh"
+alias nrb="cd $HOME/Projects/dcr-ai-flagship/scripting && ./frontendRunBuild.sh"
 
 ## Chezmoi
 alias cm="chezmoi"
