@@ -10,23 +10,23 @@ if [[ ! -d ~/.oh-my-zsh ]]; then
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 fi
 
-if [[ ! -d ~/.oh-my-zsh/custom/plugins/conda-zsh-completion ]] then
+if [[ ! -d ~/.oh-my-zsh/custom/plugins/conda-zsh-completion ]]; then
     git clone https://github.com/esc/conda-zsh-completion ~/.oh-my-zsh/custom/plugins/conda-zsh-completion
 fi
 
-if [[ ! -d ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting ]] then
+if [[ ! -d ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting ]]; then
     git clone https://github.com/zsh-users/zsh-syntax-highlighting ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 fi
 
-if [[ ! -d ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions ]] then
+if [[ ! -d ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions ]]; then
     git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
 fi
 
-if [[ ! -d ~/.oh-my-zsh/custom/plugins/k ]] then
+if [[ ! -d ~/.oh-my-zsh/custom/plugins/k ]]; then
     git clone https://github.com/supercrabtree/k ~/.oh-my-zsh/custom/plugins/k
 fi
 
-if [[ ! -d ~/.oh-my-zsh/custom/plugins/zsh-fzf-history-search ]] then
+if [[ ! -d ~/.oh-my-zsh/custom/plugins/zsh-fzf-history-search ]]; then
     git clone https://github.com/joshskidmore/zsh-fzf-history-search ~/.oh-my-zsh/custom/plugins/zsh-fzf-history-search
 fi
 
@@ -38,7 +38,7 @@ if [ ! -x "$(command -v tmux)" ]; then
     sudo apt install tmux
 fi
 
-if [[ ! -d ~/.tmux ]] then
+if [[ ! -d ~/.tmux ]]; then
     git clone https://github.com/gpakosz/.tmux.git ~/.tmux
     ln -s -f .tmux/.tmux.conf
     cp .tmux/.tmux.conf.local .
@@ -48,10 +48,9 @@ fi
 #     git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 # fi
 
-if [[ ! -d ~/.tmuxifier ]] then
+if [[ ! -d ~/.tmuxifier ]]; then
     git clone https://github.com/jimeh/tmuxifier.git ~/.tmuxifier
 fi
-
 
 # Install neovim if doesn't exist
 # if [[ ! -d ~/.config/nvim ]]; then
@@ -174,4 +173,3 @@ if [ ! -x "$(command -v tokei)" ]; then
     echo "tokei is not installed! installing now."
     cargo install tokei -q --locked
 fi
-

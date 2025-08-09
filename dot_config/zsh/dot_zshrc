@@ -5,13 +5,13 @@ export PATH=$PATH:/sbin:$HOME/.config/bin:$HOME/.amplify/bin:/opt/nvim-linux64/b
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
 
 export PNPM_HOME="/home/emrecan/.local/share/pnpm"
 case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
+*":$PNPM_HOME:"*) ;;
+*) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 
 export LC_ALL=C.UTF-8
@@ -37,11 +37,6 @@ export EDITOR=vim
 # eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 source "$HOME/.cargo/env"
 
-# Pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-
 ## CLI Tools
 ### Zoxide
 eval "$(zoxide init zsh --cmd cd)"
@@ -58,34 +53,33 @@ export PATH=$PATH:$HOME/.tmuxifier/bin
 eval "$(tmuxifier init -)"
 
 # zsh essentials
-HISTFILE="$HOME/.config/zsh/.histfile"             # Save 100000 lines of history
+HISTFILE="$HOME/.config/zsh/.histfile" # Save 100000 lines of history
 HISTSIZE=100000
 SAVEHIST=100000
-setopt BANG_HIST                 # Treat the '!' character specially during expansion.
-setopt EXTENDED_HISTORY          # Write the history file in the ":start:elapsed;command" format.
-setopt INC_APPEND_HISTORY        # Write to the history file immediately, not when the shell exits.
-setopt SHARE_HISTORY             # Share history between all sessions.
-setopt HIST_IGNORE_DUPS          # Don't record an entry that was just recorded again.
-setopt HIST_IGNORE_ALL_DUPS      # Delete old recorded entry if new entry is a duplicate.
-setopt HIST_IGNORE_SPACE         # Don't record an entry starting with a space.
+setopt BANG_HIST            # Treat the '!' character specially during expansion.
+setopt EXTENDED_HISTORY     # Write the history file in the ":start:elapsed;command" format.
+setopt INC_APPEND_HISTORY   # Write to the history file immediately, not when the shell exits.
+setopt SHARE_HISTORY        # Share history between all sessions.
+setopt HIST_IGNORE_DUPS     # Don't record an entry that was just recorded again.
+setopt HIST_IGNORE_ALL_DUPS # Delete old recorded entry if new entry is a duplicate.
+setopt HIST_IGNORE_SPACE    # Don't record an entry starting with a space.
 
 ### SSH
 if [[ -f $HOME/.config/zsh/ssh ]]; then
-    source ~/.config/zsh/ssh
+  source ~/.config/zsh/ssh
 fi
 
 ## Aliases
 if [[ -f $HOME/.config/zsh/alias.rc ]]; then
-    source $HOME/.config/zsh/alias.rc
+  source $HOME/.config/zsh/alias.rc
 fi
 
 ## Secrets
 if [[ -f $HOME/.config/zsh/secrets ]]; then
-    source $HOME/.config/zsh/secrets
+  source $HOME/.config/zsh/secrets
 fi
 
 neofetch
-
 
 ## NVM
 # place this after nvm initialization!
@@ -113,4 +107,5 @@ load-nvmrc() {
 add-zsh-hook chpwd load-nvmrc
 load-nvmrc
 
-autoload -U compinit; compinit
+autoload -U compinit
+compinit
