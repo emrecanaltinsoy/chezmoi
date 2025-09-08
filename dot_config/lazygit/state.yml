@@ -11,7 +11,7 @@ customcommandshistory:
 - git log
 hidecommandlog: false
 ignorewhitespaceindiffview: true
-diffcontextsize: 7
+diffcontextsize: 8
 localbranchsortorder: recency
 remotebranchsortorder: alphabetical
 gitlogorder: topo-order

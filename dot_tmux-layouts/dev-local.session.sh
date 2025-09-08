@@ -1,25 +1,25 @@
 # Set a custom session root path. Default is `$HOME`.
 # Must be called before `initialize_session`.
-session_root "~/Projects/dcr-ai-flagship"
+session_root "$HOME/Projects/dcr-ai-flagship"
 
 # Create session with specified name if it does not already exist. If no
 # argument is given, session name will be based on layout file name.
 if initialize_session "dev-local"; then
 
   # Create a new window inline within session layout definition.
-  new_window "dev-local"
-  new_window "lazygit"
+  new_window "build-run"
+  new_window "terminal"
+  new_window "neovim"
 
-  select_window "dev-local"
-  split_h 30
+  select_window "build-run"
   run_cmd "nrb"
-  split_v 50
+  split_h 50
   run_cmd "nrw"
   # Load a defined window layout.
-  
-  select_window "lazygit"
-  run_cmd "lazygit"
-  
+
+  select_window "neovim"
+  run_cmd "nvim ."
+
   # Select the default active window on session creation.
   #select_window 1
 
