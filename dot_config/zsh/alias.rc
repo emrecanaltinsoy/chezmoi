@@ -51,7 +51,7 @@ alias deploy_local_lambda="$HOME/Projects/dcr-ai-flagship/scripting/deploy_local
 
 ## NPM Local Dev
 alias nrw="cd $HOME/Projects/dcr-ai-flagship/scripting && ./frontendRunWeb.sh"
-alias nrb="cd $HOME/Projects/dcr-ai-flagship/scripting && ./frontendRunBuild.sh"
+alias nrb="cd $HOME/Projects/dcr-ai-flagship/scripting && nvm use v16; ./frontendRunBuild.sh"
 
 ## Chezmoi
 alias cm="chezmoi"

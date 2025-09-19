@@ -1,8 +1,8 @@
 lastupdatecheck: 0
 recentrepos:
 - /home/emrecan/Projects/dcr-ai-flagship
-- /home/emrecan/Projects/aws-saml-cli-authentication
 - /home/emrecan/.local/share/chezmoi
+- /home/emrecan/Projects/aws-saml-cli-authentication
 startuppopupversion: 5
 lastversion: 0.41.0
 customcommandshistory:
