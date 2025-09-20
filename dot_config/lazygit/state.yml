@@ -1,17 +1,16 @@
 lastupdatecheck: 0
 recentrepos:
-- /home/emrecan/Projects/dcr-ai-flagship
-- /home/emrecan/.local/share/chezmoi
-- /home/emrecan/Projects/aws-saml-cli-authentication
+    - /home/emrecan/.local/share/chezmoi
 startuppopupversion: 5
-lastversion: 0.41.0
+lastversion: 0.46.0
 customcommandshistory:
-- reset
-- q
-- git log
+    - reset
+    - q
+    - git log
 hidecommandlog: false
 ignorewhitespaceindiffview: true
 diffcontextsize: 8
+renamesimilaritythreshold: 50
 localbranchsortorder: recency
 remotebranchsortorder: alphabetical
 gitlogorder: topo-order
