@@ -153,3 +153,5 @@ eval "$(starship init bash)"
 export TMUXIFIER_LAYOUT_PATH="$HOME/.tmux-layouts"
 export PATH=$PATH:$HOME/.tmuxifier/bin
 eval "$(tmuxifier init -)"
+
+complete -C /usr/bin/terraform terraform
