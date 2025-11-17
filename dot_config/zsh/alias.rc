@@ -20,6 +20,11 @@ alias add2path="export PYTHONPATH=$PYTHONPATH:$(pwd)"
 #     alias docsr="docker stop $(docker ps -q) && docker rm $(docker ps -a -q)"
 # fi
 
+## NVIM
+alias nv="nvim"
+alias v="nvim"
+alias vh="nvim ."
+
 ## Git
 if [ -x "$(command -v docker)" ]; then
     git config --global alias.upstream '!git push -u origin HEAD'
