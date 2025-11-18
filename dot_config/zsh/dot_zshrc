@@ -112,6 +112,7 @@ load-nvmrc
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/bin/terraform terraform
 
-source ./starship_comp
+source $HOME/.config/zsh/starship_comp
+
 # autoload -U compinit
 compinit
